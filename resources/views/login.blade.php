@@ -1,99 +1,89 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>Sufee Admin - HTML5 Admin Template</title>
+    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Login</title>
+    <link rel="apple-touch-icon" href="{{asset('apple-icon.png')}}">
+    <link rel="shortcut icon" href="{{asset('favicon.ico')}}">
 
-    <!-- Custom fonts for this template-->
-    <link href="{{asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-          rel="stylesheet">
 
-    <!-- Custom styles for this template-->
-    <link href="{{asset('css/sb-admin-2.min.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('vendors/bootstrap/dist/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('vendors/font-awesome/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{asset('vendors/themify-icons/css/themify-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('vendors/flag-icon-css/css/flag-icon.min.css')}}">
+    <link rel="stylesheet" href="{{asset('vendors/selectFX/css/cs-skin-elastic.css')}}">
+
+    <link rel="stylesheet" href="{{asset('../../../public/assets/css/style.css')}}">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+
 
 </head>
 
-<body class="bg-gradient-primary">
+<body class="bg-dark">
 
-<div class="container">
 
-    <!-- Outer Row -->
-    <div class="row justify-content-center">
+<div class="sufee-login d-flex align-content-center flex-wrap">
+    <div class="container">
+        <div class="login-content">
+            <div class="login-logo">
+                <a href="index.html">
+                    <img class="align-content" src="../../../public/images/logo.png" alt="">
+                </a>
+            </div>
+            <div class="login-form">
+                <form>
+                    <div class="form-group">
+                        <label>Email address</label>
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox"> Remember Me
+                        </label>
+                        <label class="pull-right">
+                            <a href="#">Forgotten Password?</a>
+                        </label>
 
-        <div class="col-xl-10 col-lg-12 col-md-9">
-
-            <div class="card o-hidden border-0 shadow-lg my-5">
-                <div class="card-body p-0">
-                    <!-- Nested Row within Card Body -->
-                    <div class="row">
-                        <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                        <div class="col-lg-6">
-                            <div class="p-5">
-                                <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
-                                </div>
-                                <form>
-{{--                                <form class="user" method="post" action="{{route('admin.login')}}">--}}
-{{--                                    @csrf--}}
-                                    <div class="form-group">
-                                        <input type="email" name="email" class="form-control form-control-user"
-                                               id="exampleInputEmail" aria-describedby="emailHelp"
-                                               placeholder="Enter Email Address...">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" name="password" class="form-control form-control-user"
-                                               id="exampleInputPassword" placeholder="Password">
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="custom-control custom-checkbox small">
-                                            <input type="checkbox" class="custom-control-input" id="customCheck">
-                                            <label class="custom-control-label" for="customCheck">Remember
-                                                Me</label>
-                                        </div>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-user btn-block">
-                                        Login
-                                    </button>
-                                    <hr>
-                                    <a href="index.html" class="btn btn-google btn-user btn-block">
-                                        <i class="fab fa-google fa-fw"></i> Login with Google
-                                    </a>
-                                    <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                        <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
-                                    </a>
-                                </form>
-                                <hr>
-                                <div class="text-center">
-                                    <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                </div>
-{{--                                <div class="text-center">--}}
-{{--                                    <a class="small" href="{{route("admin.create")}}">Create an Account!</a>--}}
-{{--                                </div>--}}
-                            </div>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
+                    <div class="social-login-content">
+                        <div class="social-button">
+                            <button type="button" class="btn social facebook btn-flat btn-addon mb-3"><i class="ti-facebook"></i>Sign in with facebook</button>
+                            <button type="button" class="btn social twitter btn-flat btn-addon mt-2"><i class="ti-twitter"></i>Sign in with twitter</button>
                         </div>
                     </div>
-                </div>
+                    <div class="register-link m-t-15 text-center">
+                        <p>Don't have account ? <a href="#"> Sign Up Here</a></p>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 </div>
-<!-- Bootstrap core JavaScript-->
-<script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
-<script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
-<!-- Core plugin JavaScript-->
-<script src="{{asset('vendor/jquery-easing/jquery.easing.min.js')}}"></script>
 
-<!-- Custom scripts for all pages-->
-<script src="{{asset('js/sb-admin-2.min.js')}}"></script>
+<script src="{{asset('vendors/jquery/dist/jquery.min.js')}}"></script>
+<script src="{{asset('vendors/popper.js/dist/umd/popper.min.js')}}"></script>
+<script src="{{asset('vendors/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('../../../public/assets/js/main.js')}}"></script>
+
+
 </body>
+
 </html>
-
-
